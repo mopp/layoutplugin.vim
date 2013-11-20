@@ -8,7 +8,7 @@ set cpo&vim
 
 " config
 let g:layoutplugin#user_name                = get(g:, 'layoutplugin#user_name', $USER)
-let g:layoutplugin#is_append_vimrc          = get(g:, 'is_append_vimrc', 0)
+let g:layoutplugin#is_append_vimrc          = get(g:, 'layoutplugin#is_append_vimrc', 0)
 let g:layoutplugin#is_suffix_readme_md      = get(g:, 'layoutplugin#is_suffix_readme_md ', 1)
 let g:layoutplugin#is_suffix_plugin_name    = get(g:, 'layoutplugin#is_suffix_plugin_name', 1)
 let g:layoutplugin#replace_dict             = {
@@ -71,7 +71,8 @@ function! layoutplugin#make(plugin_name)
     call s:replace_copy_file(s:source_readme_path, target_readme_path)
 
     if g:layoutplugin#is_append_vimrc == 1
-        call writefile(add(readfile($MYVIMRC), "set runtimepath+=" . target_base_dir), $MYVIMRC)
+        let isFaild = writefile(add(readfile($MYVIMRC), "set runtimepath+=" . target_base_dir), $MYVIMRC)
+        echomsg "isfaild" . string(isFaild)
     endif
 
     echomsg 'Genereted in ' . target_base_dir
