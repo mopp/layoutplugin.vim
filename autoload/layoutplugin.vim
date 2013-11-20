@@ -72,7 +72,9 @@ function! layoutplugin#make(plugin_name)
 
     if g:layoutplugin#is_append_vimrc == 1
         let isFaild = writefile(add(readfile($MYVIMRC), "set runtimepath+=" . target_base_dir), $MYVIMRC)
-        echomsg "isfaild" . string(isFaild)
+        if isFaild == -1
+            throw "cannot write vimrc"
+        endif
     endif
 
     echomsg 'Genereted in ' . target_base_dir
