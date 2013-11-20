@@ -1,5 +1,5 @@
 ## LayoutPlugin.vim
-This is Vim Plugin for generate plugin directory structure.
+This is Vim Plugin for generate plugin directory and files.
 
 ## Installation
     ```vim
