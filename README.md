@@ -2,7 +2,7 @@
 This is Vim Plugin for generate plugin directory and files.
 
 ## Installation
-    Neobundle 'mopp/layoutplugin.vim'
+    NeoBundle 'mopp/layoutplugin.vim'
 
 ## Configure
 g:layoutplugin#is_suffix_plugin_name  
