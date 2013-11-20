@@ -43,7 +43,7 @@ endfunction
 
 function! layoutplugin#make(plugin_name)
     " set plugin name for replacement
-    let no_suffix = substitute(a:plugin_name, '/.vim', '', 'g')
+    let no_suffix = substitute(a:plugin_name, '\.vim', '', 'g')
     if g:layoutplugin#is_suffix_plugin_name == 1
         let name = no_suffix . '.vim'
     else
