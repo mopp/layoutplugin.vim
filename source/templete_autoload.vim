@@ -5,6 +5,8 @@
 "=============================================================================
 
 
+scriptencoding utf-8
+
 if !exists('g:loaded_{REPLACE_PLUGIN_NAME}')
     runtime! plugin/{REPLACE_PLUGIN_NAME_WITH_SUFFIX}
 endif
