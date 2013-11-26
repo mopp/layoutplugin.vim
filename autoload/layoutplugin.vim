@@ -54,7 +54,8 @@ function! layoutplugin#make(plugin_name)
     let g:layoutplugin#replace_dict['plugin_name'] = layoutplugin#utils#make_replace_map('{REPLACE_PLUGIN_NAME}', no_suffix)
 
     " define dir and path
-    let target_base_dir = getcwd() . '/' . name . '/'
+    let target_contain_dir = substitute(expand(get(g:, 'layoutplugin#plugins_contain_dir', getcwd())), '/$', '', '')
+    let target_base_dir = target_contain_dir . '/' . name . '/'
     let target_plugin_path = target_base_dir.'plugin/' . name
     let target_autoload_path = target_base_dir.'autoload/' . name
     let target_readme_path = target_base_dir.'README' . layoutplugin#utils#get_suffix_readme()
