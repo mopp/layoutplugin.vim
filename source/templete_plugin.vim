@@ -4,8 +4,8 @@
 " Created: {REPLACE_DATE}
 "=============================================================================
 
-
 scriptencoding utf-8
+
 if exists('g:loaded_{REPLACE_PLUGIN_NAME}')
     finish
 endif

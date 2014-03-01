@@ -11,6 +11,7 @@ let g:layoutplugin#user_name                = get(g:, 'layoutplugin#user_name', 
 let g:layoutplugin#is_append_vimrc          = get(g:, 'layoutplugin#is_append_vimrc', 0)
 let g:layoutplugin#is_suffix_readme_md      = get(g:, 'layoutplugin#is_suffix_readme_md ', 1)
 let g:layoutplugin#is_suffix_plugin_name    = get(g:, 'layoutplugin#is_suffix_plugin_name', 1)
+" TODO: replace '-' to '_' when plugin name contains '-'.
 let g:layoutplugin#replace_dict             = {
             \ 'plugin_name' : layoutplugin#utils#make_replace_map('{REPLACE_PLUGIN_NAME}', g:layoutplugin#user_name),
             \ 'auther'      : layoutplugin#utils#make_replace_map('{REPLACE_USER_NAME}', g:layoutplugin#user_name),
